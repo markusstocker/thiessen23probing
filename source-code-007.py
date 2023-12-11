@@ -21,7 +21,7 @@ random.seed(20221219)
 model = BertModel.from_pretrained("allenai/scibert_scivocab_uncased")
 tokenizer = BertTokenizer.from_pretrained("allenai/scibert_scivocab_uncased")
 num_cluster = 117
-num_layer = 1
+num_layer = 7
 data_source = "orkg.csv"
 
 

@@ -18,8 +18,8 @@ from transformers import BartTokenizer, BartModel
 
 random.seed(20221219)
 
-model = BertModel.from_pretrained("allenai/scibert_scivocab_uncased")
-tokenizer = BertTokenizer.from_pretrained("allenai/scibert_scivocab_uncased")
+model = BartModel.from_pretrained("facebook/bart-base")
+tokenizer = BartTokenizer.from_pretrained("facebook/bart-base")
 num_cluster = 117
 num_layer = 1
 data_source = "orkg.csv"
@@ -62,7 +62,7 @@ def calc_embed(data):
     model.eval()
     with torch.no_grad():
       outputs = model(**token, output_hidden_states=True)
-      layers = outputs.hidden_states[1:]
+      layers = outputs.decoder_hidden_states[1:]
       for k in range(0, len(layers)):
         embed = layers[k].numpy().squeeze()
         n = list(embed.shape)[0]

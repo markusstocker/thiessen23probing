@@ -20,9 +20,9 @@ random.seed(20221219)
 
 model = BertModel.from_pretrained("allenai/scibert_scivocab_uncased")
 tokenizer = BertTokenizer.from_pretrained("allenai/scibert_scivocab_uncased")
-num_cluster = 117
-num_layer = 1
-data_source = "orkg.csv"
+num_cluster = 293
+num_layer = 4
+data_source = "SciERC.csv"
 
 
 def create_dataframe(filename):

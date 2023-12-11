@@ -18,11 +18,11 @@ from transformers import BartTokenizer, BartModel
 
 random.seed(20221219)
 
-model = BertModel.from_pretrained("allenai/scibert_scivocab_uncased")
-tokenizer = BertTokenizer.from_pretrained("allenai/scibert_scivocab_uncased")
-num_cluster = 117
-num_layer = 1
-data_source = "orkg.csv"
+model = RobertaModel.from_pretrained("roberta-base")
+tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
+num_cluster = 336
+num_layer = 2
+data_source = "SemEval2017-task10.csv"
 
 
 def create_dataframe(filename):

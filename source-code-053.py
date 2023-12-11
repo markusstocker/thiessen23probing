@@ -18,10 +18,10 @@ from transformers import BartTokenizer, BartModel
 
 random.seed(20221219)
 
-model = BertModel.from_pretrained("allenai/scibert_scivocab_uncased")
-tokenizer = BertTokenizer.from_pretrained("allenai/scibert_scivocab_uncased")
+model = RobertaModel.from_pretrained("roberta-base")
+tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 num_cluster = 117
-num_layer = 1
+num_layer = 5
 data_source = "orkg.csv"
 
 
